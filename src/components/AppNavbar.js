@@ -4,7 +4,7 @@ import logo from "../assets/whole.png";
 import "../css/AppNavbar.css"; // Add custom CSS for sliding-up popup
 import SignUp from "./SignUp";
 import SignIn from "./SignIn";
-import { FaTimes } from "react-icons/fa"; // Import close icon from react-icons
+import { FaTimes, FaTimesCircle } from "react-icons/fa"; // Import close icon from react-icons
 
 const AppNavbar = () => {
   const [showModal, setShowModal] = useState(false); // State for Modal
@@ -101,17 +101,41 @@ const AppNavbar = () => {
       </Navbar>
 
       {/* Modal for larger screens */}
-      <Modal
-        show={showModal}
-        onHide={closeModal}
-        centered
-        size="lg" /* Makes the modal larger */
-        className="custom-signup-modal"
-      >
-        <Modal.Body className="p-0 position-relative"> {/* Add position-relative */}
-          {/* Close Icon */}
-          <FaTimes
-            onClick={closeModal}
+      {isSmallScreen === false && (
+        <Modal
+          show={showModal}
+          onHide={closeModal}
+          centered
+          size="lg"
+          className="custom-signup-modal"
+        >
+          <Modal.Body className="p-0 position-relative">
+            {/* Close Icon for Modal (Only visible on larger screens) */}
+            <FaTimes
+              onClick={closeModal}
+              style={{
+                position: "absolute",
+                top: "10px",
+                right: "10px",
+                fontSize: "24px",
+                cursor: "pointer",
+              }}
+            />
+            {isSignUp ? (
+              <SignUp onSwitchToSignIn={switchToSignIn} />
+            ) : (
+              <SignIn onSwitchToSignUp={switchToSignUp} />
+            )}
+          </Modal.Body>
+        </Modal>
+      )}
+
+      {/* Popup for small screens */}
+      {isSmallScreen && (
+        <div className={`popup-container ${showPopup ? "show-popup" : ""}`}>
+          {/* Close Icon for Popup (Only visible on small screens) */}
+          <FaTimesCircle
+            onClick={closePopup} // Close the popup when clicked
             style={{
               position: "absolute",
               top: "10px",
@@ -120,20 +144,12 @@ const AppNavbar = () => {
               cursor: "pointer",
             }}
           />
+          {/* Sign-In / Sign-Up Form will be here */}
           {isSignUp ? (
-            <SignUp onSwitchToSignIn={switchToSignIn} />
+            <SignUp onSwitchToSignIn={switchToSignIn} isMobile={true} onClose={closePopup} />
           ) : (
-            <SignIn onSwitchToSignUp={switchToSignUp} />
+            <SignIn onSwitchToSignUp={switchToSignUp} isMobile={true} onClose={closePopup} />
           )}
-        </Modal.Body>
-      </Modal>
-
-      {/* Popup for small screens */}
-      {isSmallScreen && (
-        <div className={`popup-container ${showPopup ? "show-popup" : ""}`}>
-            {/* Sign-In / Sign-Up Form will be here */}
-            <SignUp />
-            {/* You can add the form design later */}
         </div>
       )}
     </>

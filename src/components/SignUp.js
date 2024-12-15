@@ -6,11 +6,6 @@ import { FaEye, FaRegEye, FaTimes } from "react-icons/fa"; // Close icon
 const SignUp = ({ onSwitchToSignIn, isMobile, onClose }) => {
   return (
     <div className={`signup-container ${isMobile ? "mobile" : ""}`}>
-      {isMobile && (
-        <div className="close-button" onClick={onClose}>
-          <FaTimes />
-        </div>
-      )}
       
       {!isMobile && (
         <div className="success-banner">
@@ -35,6 +30,7 @@ const SignUp = ({ onSwitchToSignIn, isMobile, onClose }) => {
             </div>
             <input type="password" className="form-control" placeholder="Confirm Password" />
             <button className="create-account-btn">Create Account</button>
+            <div className="optional-signin-link display-none"><span style={{ cursor: "pointer" }} onClick={onSwitchToSignIn}>or, Sign In</span></div>
           </form>
 
           <button className="social-btn facebook-btn">
@@ -45,7 +41,6 @@ const SignUp = ({ onSwitchToSignIn, isMobile, onClose }) => {
           </button>
         </div>
 
-        {!isMobile && (
           <div className="signup-right">
             <p className="signin-text">
               Already have an account?{" "}
@@ -59,7 +54,6 @@ const SignUp = ({ onSwitchToSignIn, isMobile, onClose }) => {
               <span> Privacy policy</span>
             </p>
           </div>
-        )}
       </div>
     </div>
   );

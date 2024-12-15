@@ -136,22 +136,54 @@
   cursor: pointer;
 }
 
+.display-none{
+  display: none;
+}
+
+/* Media Queries for Mobile */
+/* Media Queries for Mobile */
 /* Media Queries for Mobile */
 @media (max-width: 768px) {
   .signup-content {
       flex-direction: column;
       padding: 1rem;
   }
-
+  .signup-image{
+    display: none;
+  }
+  .display-none{
+    display: block;
+    float: right;
+    margin-top: 25px;
+    text-decoration: underline;
+  }
   .signup-left {
       padding-right: 0;
   }
-
-  .signup-right {
-      display: none; /* Hide image and additional text */
+  .signin-text{
+    display: none;
   }
-
+  .create-account-btn{
+    width: 40%;
+  }
   .success-banner {
       display: none; /* Hide success banner on mobile */
   }
+
+  .optional-signin-link{
+    display: inline;
+  }
+
+  /* Ensuring privacy policy text is visible */
+  .terms-text {
+    font-size: 0.8rem;
+    color: #888;
+    text-align: center;
+    margin-top: 1rem; /* Adjusted to ensure it's visible */
+    width: 100%; /* Ensures the text doesn't get cut off */
+    margin-bottom: 1rem; /* Adds some space at the bottom */
+  }
 }
+
+
+
