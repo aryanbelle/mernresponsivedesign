@@ -1,0 +1,157 @@
+/* Container */
+.signup-container {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7f9fc;
+}
+
+/* Success Banner */
+.success-banner {
+  width: 100%;
+  text-align: center;
+  background-color: #EFFFF4;
+  color: #008A45;
+  padding: 16px 0;
+}
+
+/* Main Content */
+.signup-content {
+  display: flex;
+  max-width: 900px;
+  width: 100%;
+  background-color: white;
+  padding: 2rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  flex-wrap: wrap; /* Allow for wrapping */
+}
+
+/* Left Side */
+.signup-left {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+/* Form Fields */
+.create-account {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.signup-form input {
+  width: 100%;
+  padding: 10px;
+  margin: 0;
+  border: 1px solid #D9D9DB;
+  border-radius: 4px;
+  outline: none;
+  box-sizing: border-box;
+  background-color: #F7F8FA;
+  margin-bottom: 0.5rem;
+}
+
+/* Adjust layout for form-row */
+.form-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.form-row input {
+  flex: 1;
+}
+
+.password-input {
+  position: relative;
+}
+
+.password-input input {
+  padding-right: 2rem;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.create-account-btn {
+  background-color: #2F6CE5;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+/* Social buttons */
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  width: 100%;
+  margin-top: 0.5rem;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+/* Right Side */
+.signup-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.signup-image {
+  max-width: 100%;
+  height: auto;
+  max-width: 250px;
+  margin-top: 15%;
+}
+
+.signin-text {
+  margin-bottom: 1rem;
+}
+
+.terms-text {
+  font-size: 0.8rem;
+  color: #888;
+  text-align: center;
+  margin-top: auto;
+}
+
+.terms-text span {
+  color: #1976d2;
+  cursor: pointer;
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+  .signup-content {
+      flex-direction: column;
+      padding: 1rem;
+  }
+
+  .signup-left {
+      padding-right: 0;
+  }
+
+  .signup-right {
+      display: none; /* Hide image and additional text */
+  }
+
+  .success-banner {
+      display: none; /* Hide success banner on mobile */
+  }
+}

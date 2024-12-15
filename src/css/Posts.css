@@ -1,0 +1,77 @@
+/* Remove blue background for active tab */
+.nav-pills .nav-link.active {
+    background-color: transparent !important;
+    /* Remove blue background */
+    font-weight: bold;
+    /* Bold text for active tab */
+    color: #000 !important;
+    /* Set active tab text color to black */
+    border-bottom: 2px solid #000;
+    /* Ensure a border is there for the active tab */
+}
+
+/* Style for all other (inactive) tabs */
+.nav-pills .nav-link {
+    color: #6c757d;
+    /* Set default text color for non-active tabs */
+    border-radius: 0 !important;
+    /* Remove border radius for clean edges */
+}
+
+/* Optional: Hover effect to improve user experience */
+.nav-pills .nav-link:hover {
+    color: #000;
+    /* Change text color on hover */
+}
+
+/* CSS to make the PostCards fixed */
+.post-cards-fixed {
+    position: -webkit-sticky;
+    /* For Safari */
+    position: sticky;
+    top: 0;
+    /* Start sticking at the top */
+    z-index: 10;
+    /* Ensure it's above other content */
+    height: 100%;
+    /* Full height */
+    overflow-y: auto;
+    /* Allow vertical scrolling */
+    scrollbar-width: none;
+    /* For Firefox - hides scrollbar */
+    -ms-overflow-style: none;
+    /* For Internet Explorer and Edge */
+}
+
+.post-cards-fixed::-webkit-scrollbar {
+    display: none;
+    /* For Chrome, Safari, and Opera */
+}
+
+.post-cards-container {
+    height: 100%;
+    /* Make sure the PostCards section fills its parent height */
+}
+
+.container {
+    height: 100%;
+    /* Ensure the container spans the full viewport height */
+}
+
+#dropdown-basic-button {
+    background-color: #F1F3F5;
+    border: none;
+    color: #000;
+}
+
+/* Default style for larger screens */
+.post-card {
+    width: 85%;
+}
+
+/* Apply 100% width on small screens */
+@media (max-width: 880px) {
+    .post-card {
+        width: 100%;
+    }
+}

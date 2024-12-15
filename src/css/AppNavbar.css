@@ -1,0 +1,57 @@
+/* For mobile popup, slide up from bottom */
+.popup-container {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    z-index: 9999;
+    transition: bottom 0.3s ease-in-out;
+    border-top-left-radius: 15px; /* Add border-radius for top-left corner */
+    border-top-right-radius: 15px; /* Add border-radius for top-right corner */
+    overflow: hidden; /* Prevent content from spilling outside */
+}
+
+.popup-container.show-popup {
+    bottom: 0;
+}
+
+.popup-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border-top-left-radius: 15px; /* Apply border-radius to the content as well */
+    border-top-right-radius: 15px; /* Apply border-radius to the content as well */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+    max-height: 100vh; /* Ensure it takes the full height */
+    overflow-y: auto; /* Add scrolling if content overflows */
+    border: none; /* Ensure there is no border */
+    width: 100%; /* Ensure it spans the full width */
+}
+
+/* Increase the width of the modal */
+.custom-signup-modal .modal-dialog {
+    max-width: 800px; /* Adjust the width as needed */
+    width: 100%; /* Ensure it doesn't overflow */
+}
+
+/* Optional: Control modal content height */
+.custom-signup-modal .modal-content {
+    height: 100%; /* Ensure content takes full height of the modal */
+}
+
+/* Control modal body height (adjust this to your needs) */
+.custom-signup-modal .modal-body {
+    max-height: 90vh; /* Limit the content height to 90% of the viewport height */
+    overflow-y: auto; /* Add scrolling if content overflows */
+}
+
+/* For larger screen modals */
+@media (min-width: 768px) {
+  .custom-signup-modal .modal-dialog {
+    max-width: 900px; /* Adjust the width for larger screens */
+  }
+}

@@ -1,0 +1,70 @@
+/* Updated SignIn page styles */
+
+/* Forgot password link */
+.forgot-password-link {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.forgot-password-link a {
+    color: #1976d2;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.forgot-password-link a:hover {
+    text-decoration: underline;
+}
+
+/* Right Side - SignIn Text */
+.signin-text {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+/* Social Buttons */
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+    margin-top: 0.5rem;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+/* Button styles for SignIn */
+.create-account-btn {
+    background-color: #2F6CE5;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem; /* Adjust space for the button */
+}
+
+/* Updated right-side image */
+.signin-image {
+    width: 100%;
+    max-width: 250px;
+    margin-top: 12%;
+}
+
+/* Additional spacing for terms text */
+.terms-text {
+    font-size: 0.8rem;
+    color: #888;
+    text-align: center;
+    margin-top: auto;
+}
+
+.terms-text span {
+    color: #1976d2;
+    cursor: pointer;
+}
