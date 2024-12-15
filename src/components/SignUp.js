@@ -1,7 +1,9 @@
 import React from "react";
 import "../css/Signup.css";
 import Illustration from "../assets/modal-illus.png"; // Still kept for larger screens
-import { FaEye, FaRegEye, FaTimes } from "react-icons/fa"; // Close icon
+import { FaRegEye } from "react-icons/fa"; // Close icon
+import GoogleIcon from "../assets/google.svg";
+import FaceBookIcon from "../assets/fb.svg";
 
 const SignUp = ({ onSwitchToSignIn, isMobile, onClose }) => {
   return (
@@ -18,7 +20,7 @@ const SignUp = ({ onSwitchToSignIn, isMobile, onClose }) => {
           <h2 className="create-account"><b>Create Account</b></h2>
           <form className="signup-form">
             <div className="form-row">
-              <input type="text" className="form-control" placeholder="First Name" />
+              <input type="text" className="form-control" placeholder="First Name" />   
               <input type="text" className="form-control" placeholder="Last Name" />
             </div>
             <input type="email" className="form-control" placeholder="Email" />
@@ -34,10 +36,12 @@ const SignUp = ({ onSwitchToSignIn, isMobile, onClose }) => {
           </form>
 
           <button className="social-btn facebook-btn">
-            🔒 Sign up with Facebook
+            <img src={GoogleIcon} alt="logo" style={{marginRight: "10px"}} height={20} width={20}/>
+             Sign up with Facebook
           </button>
           <button className="social-btn google-btn">
-            🔍 Sign up with Google
+            <img src={FaceBookIcon} alt="logo" style={{marginRight: "10px"}} height={20} width={20}/>
+            Sign up with Google
           </button>
         </div>
 

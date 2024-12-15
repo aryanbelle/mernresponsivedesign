@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col, Form, InputGroup, Button, Image } from "react-bootstrap";
+import { Col, Form, InputGroup, Button, Image } from "react-bootstrap";
 import { FaInfoCircle, FaMapMarkerAlt, FaPencilAlt, FaThumbsUp } from "react-icons/fa"; // For icons
 
 const RightSection = () => {
@@ -47,7 +47,7 @@ const RightSection = () => {
 
         {/* User List */}
         <div>
-          {[1, 2, 3, 4].map((user, index) => (
+          {["Leisure", "Activism","MBA","Philosophy"].map((user, index) => (
             <div
               key={index}
               className="d-flex align-items-center justify-content-between mb-3"
@@ -63,7 +63,7 @@ const RightSection = () => {
                   roundedCircle
                   style={{ marginRight: "10px" }}
                 />
-                <span style={{ fontSize: "14px", color: "#333" }}>User {index + 1}</span>
+                <span style={{ fontSize: "14px", color: "#333" }}>{user}</span>
               </div>
 
               {/* Follow Button */}

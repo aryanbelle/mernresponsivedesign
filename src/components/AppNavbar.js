@@ -110,7 +110,6 @@ const AppNavbar = () => {
           className="custom-signup-modal"
         >
           <Modal.Body className="p-0 position-relative">
-            {/* Close Icon for Modal (Only visible on larger screens) */}
             <FaTimes
               onClick={closeModal}
               style={{
@@ -130,12 +129,11 @@ const AppNavbar = () => {
         </Modal>
       )}
 
-      {/* Popup for small screens */}
+
       {isSmallScreen && (
         <div className={`popup-container ${showPopup ? "show-popup" : ""}`}>
-          {/* Close Icon for Popup (Only visible on small screens) */}
           <FaTimesCircle
-            onClick={closePopup} // Close the popup when clicked
+            onClick={closePopup} 
             style={{
               position: "absolute",
               top: "10px",
@@ -144,7 +142,6 @@ const AppNavbar = () => {
               cursor: "pointer",
             }}
           />
-          {/* Sign-In / Sign-Up Form will be here */}
           {isSignUp ? (
             <SignUp onSwitchToSignIn={switchToSignIn} isMobile={true} onClose={closePopup} />
           ) : (

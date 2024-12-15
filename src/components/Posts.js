@@ -38,7 +38,7 @@ const Posts = () => {
                     <Col md={9}>
                         {isSmallScreen ? (
                             <div className="d-flex justify-content-between align-items-center">
-                                <span className="font-weight-bold">Posts (368)</span>
+                                <span className=""><b>Posts (368)</b></span>
                                 <DropdownButton
                                     id="dropdown-basic-button"
                                     title="Filter: All Posts"

@@ -1,7 +1,9 @@
 import React from "react";
 import "../css/Signup.css";
 import Illustration from "../assets/modal-illus.png"; // Still kept for larger screens
-import { FaEye, FaRegEye } from "react-icons/fa"; // Eye icons for password visibility toggle
+import { FaRegEye } from "react-icons/fa"; // Eye icons for password visibility toggle
+import GoogleIcon from "../assets/google.svg";
+import FaceBookIcon from "../assets/fb.svg";
 
 const SignIn = ({ onSwitchToSignUp, isMobile }) => {
   return (
@@ -27,16 +29,18 @@ const SignIn = ({ onSwitchToSignUp, isMobile }) => {
             <button className="create-account-btn">Sign In</button>
             <div className="optional-signin-link display-none">
               <span style={{ cursor: "pointer" }} onClick={onSwitchToSignUp}>
-                or, Sign Up
+                or, Create Account
               </span>
             </div>
           </form>
 
           <button className="social-btn facebook-btn">
-            🔒 Sign in with Facebook
+            <img src={GoogleIcon} alt="logo" style={{marginRight: "10px"}} height={20} width={20}/>
+            Sign in with Facebook
           </button>
           <button className="social-btn google-btn">
-            🔍 Sign in with Google
+            <img src={FaceBookIcon} alt="logo" style={{marginRight: "10px"}} height={20} width={20}/>
+            Sign in with Google
           </button>
 
           {/* Forgot Password Link placed below Google button */}
